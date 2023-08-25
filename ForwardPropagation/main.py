@@ -20,21 +20,24 @@ def sequential(x):
     W1 = W
     b1 = b
 
-    W2 = W
-    b2 = b
+    W2 = np.array([
+        [1, 4],
+        [2, 5],
+        [-3, -6]
+    ])
+    b2 = np.array([-1, 1])
 
-    W3 = W
-    b3 = b
-
-    W4 = W
-    b4 = b
+    W3 = np.array([
+        [1],
+        [2]
+    ])
+    b3 = np.array([1])
 
     a1 = dense(x, W1, b1)
     a2 = dense(a1, W2, b2)
     a3 = dense(a2, W3, b3)
-    a4 = dense(a3, W4, b4)
 
-    return a4
+    return a3
 
 
 if __name__ == '__main__':
