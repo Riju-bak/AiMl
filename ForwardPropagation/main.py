@@ -3,7 +3,7 @@ import numpy as np
 
 
 def sigmoid(x):
-    return 1 / (1 + np.exp(x))
+    return 1 / (1 + np.exp(-x))
 
 
 def dense(x, W, b):
