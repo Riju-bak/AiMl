@@ -1,11 +1,26 @@
+import numpy as np
+
 from neural import NeuralNet
 from utils import load_coffee_data
 
 if __name__ == '__main__':
     X, y = load_coffee_data()
-    print(X.shape)
-    print(y.shape)
-    nn = NeuralNet(X, y)
-    nn.train()
-    print(nn.predict(200, 13.9))
-    print(nn.predict(200, 17))
+    print(X)
+    print(y)
+    nn = NeuralNet()
+    nn.train(X, y)
+    x_test = np.array(
+        [
+            [185, 12.6],  # good roast
+            [200, 17]  # bad roast
+        ]
+    )
+    y_test = np.array(
+        [
+            [1],
+            [0]
+        ]
+    )
+
+    nn.evaluate(x_test, y_test)
+    print(nn.predict(x_test))
