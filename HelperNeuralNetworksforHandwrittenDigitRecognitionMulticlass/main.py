@@ -120,7 +120,7 @@ if __name__ == '__main__':
     # END UNIT TEST
 
     [layer1, layer2, layer3] = model.layers
-    #### Examine Weights shapes
+    # Examine Weights shapes
     W1, b1 = layer1.get_weights()
     W2, b2 = layer2.get_weights()
     W3, b3 = layer3.get_weights()
